@@ -5,15 +5,16 @@ from pprint import pprint
 
 testament = input('Testament')
 booknum = input('Book Num')
-chapters = input("Num of Chapters")
-
 
 if testament == "old":
     f = open('old_testament.json', 'r')
     data = json.load(f)
-else:
+elif testament == 'new':
     f = open('new_testament.json', 'r')
     data = json.load(f)
+else:
+    print('nah fam')
+    exit()
 
 
 book = data[int(booknum)]
